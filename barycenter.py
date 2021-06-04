@@ -47,4 +47,3 @@ class Barycenter:
                 print("The value corresponding to the line " + str(i) + " from the 'y' column is : " + str(
                     barycenter_list[i][j]))
                 
-      hello guys 
