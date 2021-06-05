@@ -2,6 +2,7 @@ from pathlib import Path
 import numpy.random
 import numpy as np
 import pandas as pd
+import random
 
 
 class Barycenter:
