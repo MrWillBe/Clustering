@@ -21,6 +21,6 @@ barycenter_group = Barycenter_List(2)
 #data = np.array(barycenter_group.abs_list, barycenter_group.ord_list)
 #print(data)
 normes = Operator.norme(barycenter_group)
-print(normes)
+
 Operator.sortNorms(normes)
-print(normes)
+Operator.attribuer(normes)

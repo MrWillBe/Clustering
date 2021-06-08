@@ -31,4 +31,17 @@ class Operator:
     # Sort each array of self.normes in ascending order
     def sortNorms(ls : list):
         for i in range(len(ls)):
-            ls[i] = ls[i][ls[i][:,1].argsort()]
+            ls[i] = ls[i][ls[i][:, 1].argsort()]
+
+
+    def attribuer(normes_tab):
+        clusters = [[] for i in range(len(normes_tab))]
+        nb_val = normes_tab[0].shape[0]
+        partie = nb_val//10
+        print(partie)
+        #Double boucle
+
+
+
+
+
