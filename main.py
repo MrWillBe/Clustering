@@ -1,4 +1,7 @@
+import numpy as np
+
 from barycenter_list import Barycenter_List
+from Operator import Operator
 
 # barycenter_list = barycenter.random_barycenter(3)
 # print(barycenter_list)
@@ -14,4 +17,10 @@ from barycenter_list import Barycenter_List
 # print(barycenter_ord)
 
 barycenter_group = Barycenter_List(2)
-print(barycenter_group.barycenter_list[1].abs)
+#print(barycenter_group.barycenter_list[1].abs)
+#data = np.array(barycenter_group.abs_list, barycenter_group.ord_list)
+#print(data)
+normes = Operator.norme(barycenter_group)
+print(normes)
+Operator.sortNorms(normes)
+print(normes)

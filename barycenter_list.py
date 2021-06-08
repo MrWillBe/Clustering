@@ -11,6 +11,7 @@ class Barycenter_List:
         self.indices = ds[["indice"]]
         self.abs_list = ds[["x"]]
         self.ord_list = ds[["y"]]
+        self.data = np.array([ds['x'], ds['y']]).T
         self.barycenter_list = []
         self.create_barycenter(nbr_barycentres)
 
