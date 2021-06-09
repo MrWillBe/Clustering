@@ -28,20 +28,16 @@ class Operator:
             normes.append(np.c_[indices, column_norme])
         return normes
 
-    # Sort each array of self.normes in ascending order
-    def sortNorms(ls : list):
-        for i in range(len(ls)):
-            ls[i] = ls[i][ls[i][:, 1].argsort()]
-
-
-    def attribuer(normes_tab):
-        clusters = [[] for i in range(len(normes_tab))]
-        nb_val = normes_tab[0].shape[0]
-        partie = nb_val//10
-        print(partie)
-        #Double boucle
-
-
-
-
-
+    def attribuer(normes_list):
+        # Tableau contenant "n" clusters
+        clusters = [[] for i in range(len(normes_list[0]))]
+        # Déterminer la plus petite norme de chaque point et les attribuer au cluster correspondant
+        # Nombre de lignes
+        for i in range(len(normes_list)):
+            # Valeur minimale parmi les "n" normes
+            minimum = min(normes_list[i])
+            # Index de la valeur minimale
+            index_min = normes_list[i].index(minimum)
+            # Ajout du point dans le cluster correspondant
+            clusters[index_min].append(i)
+        print(clusters)
