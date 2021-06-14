@@ -42,7 +42,7 @@ while stop == False and compteur < 1_000:
     # Création de la liste des normes de chaque point par rapport aux "n" barycentres
     normes_list = []
     for i in range(data.shape[1]):
-        normes_list.append(Operator.norme(barycenters, data[0][i], data[1][i]))
+        normes_list.append(Operator.norme(barycenters, Data.data[0][i], Data.data[1][i]))
 
     # Test
     # print(normes_list)

@@ -2,7 +2,7 @@ import pandas as pd
 from pathlib import Path
 import numpy as np
 
-ds = pd.read_csv(Path().joinpath('data', 'Data_test.csv'))
+ds = pd.read_csv(Path().joinpath('data', 'Data_150.csv'))
 data = np.array([ds['x'], ds['y']])
 dataT = np.array([ds['x'], ds['y']]).T
 abs_list = ds[["x"]]
