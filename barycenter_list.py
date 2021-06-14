@@ -2,16 +2,16 @@ from pathlib import Path
 import numpy.random
 import numpy as np
 import pandas as pd
+from pathlib import Path
+import numpy as np
+import pandas as pd
+
+import Data
 from barycenter import Barycenter
 
 
 class Barycenter_List:
     def __init__(self, nbr_barycentres):
-        ds = pd.read_csv(Path().joinpath('data', 'Data_test.csv'))
-        self.indices = ds[["indice"]]
-        self.abs_list = ds[["x"]]
-        self.ord_list = ds[["y"]]
-        self.data = np.array([ds['x'], ds['y']]).T
         self.barycenter_list = []
         self.create_barycenter(nbr_barycentres)
 
@@ -20,7 +20,7 @@ class Barycenter_List:
 
     def create_barycenter(self, nbr_barycentre):
         for i in range(nbr_barycentre):
-            self.barycenter_list.append(Barycenter(self.abs_list, self.ord_list))
+            self.barycenter_list.append(Barycenter(Data.abs_list, Data.ord_list))
 
     # Get the abs from specified barycenter
     def get_abs_barycenter_list(self, p_line, p_barycenter_number):
