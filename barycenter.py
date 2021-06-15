@@ -10,6 +10,5 @@ class Barycenter:
         self.abs = numpy.random.uniform(np.amin(abs_list), np.amax(abs_list), 1)
         self.ord = numpy.random.uniform(np.amin(ord_list), np.amax(ord_list), 1)
 
-
-    def getCoord(self):
-        return np.array([self.abs, self.ord]).T
+    def getcoord(self):
+        return [self.abs[0], self.ord[0]]
